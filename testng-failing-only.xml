@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failing Tests Only" verbose="2" parallel="false">
+    <!-- Run only the 3 failing tests -->
+    <test name="Failing Tests Debug">
+        <classes>
+            <class name="com.rajbele.automation.tests.ProductDetailsTest">
+                <methods>
+                    <include name="testProductBrandDisplay"/>
+                </methods>
+            </class>
+            <class name="com.rajbele.automation.tests.ContactUsAndReviewTest">
+                <methods>
+                    <include name="testContactUsFormSubmission"/>
+                    <include name="testContactUsFormWithFileAttachment"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="Automation Test Suite" parallel="false" verbose="2">
+    
+    <!-- Global Listeners -->
+    <listeners>
+        <listener class-name="com.rajbele.automation.listeners.TestNGListener"/>
+    </listeners>
+
+    <!-- Smoke Test Suite -->
+    <test name="Smoke Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.rajbele.automation.tests.HomePageTest"/>
+            <class name="com.rajbele.automation.tests.CartPageTest"/>
+            <class name="com.rajbele.automation.tests.ProductSearchTest"/>
+        </classes>
+    </test>
+
+    <!-- Regression Test Suite -->
+    <test name="Regression Tests" enabled="true">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.rajbele.automation.tests.LoginTest"/>
+            <class name="com.rajbele.automation.tests.RegistrationTest"/>
+            <class name="com.rajbele.automation.tests.ProductDetailsTest"/>
+            <class name="com.rajbele.automation.tests.CartAndCheckoutTest"/>
+            <class name="com.rajbele.automation.tests.NavigationAndSearchTest"/>
+            <class name="com.rajbele.automation.tests.ContactUsAndReviewTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="Rajbele Automation Test Suite" parallel="false" verbose="2">
+
+    <!-- Global Listeners -->
+    <listeners>
+        <listener class-name="com.rajbele.automation.listeners.TestNGListener"/>
+    </listeners>
+
+    <!-- Smoke Test Suite -->
+    <test name="Smoke Tests" enabled="false">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- Test classes will be added here -->
+        </classes>
+    </test>
+
+    <!-- Regression Test Suite -->
+    <test name="Regression Tests" enabled="false">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- Test classes will be added here -->
+        </classes>
+    </test>
+
+    <!-- Sanity Test Suite -->
+    <test name="Sanity Tests" enabled="false">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- Test classes will be added here -->
+        </classes>
+    </test>
+
+</suite>
